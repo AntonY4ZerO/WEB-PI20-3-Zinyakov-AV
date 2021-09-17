@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Опросник</title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="33.css">
+    </head>	
+    <body bgcolor="lightblue">
+        <h1 id="h1-1">Good Vibes Form</h1>
+        <br>
+        <div id="divv">
+            <h3 style="margin-top: 5px;">Tell me something positive that happened to you today.</h3>
+            <label for="name">Name </label><br>
+            <input type="text" placeholder="Your name" name="name" id="name"><br>
+            <label for="email">Email </label><br>
+            <input type="email" placeholder="Your email" name="email" id="name"><br>
+            <label for="count">On a scale of 1-10, how good was it? </label><br>
+            <input type="text" placeholder="Your number" name="count" id="name"><br>
+            <label id = "name"> How it happened? <select name="user_profile" id="name">
+                <option value="1">Spontaniously</option>
+                <option value="2">Specially</option>
+                <option value="3">Just luck</option>
+            </select></label><br>
+            <label for="radio" id = "name"> At what time of a day it happened? <br>
+            <div style="margin-bottom: 10px; margin-top: 1px">
+                <span><input type="radio" name="number"> Morning</span><br>
+                <span><input type="radio" name="number"> Day</span><br>
+                <span><input type="radio" name="number"> Evening</span><br><br>
+            <label for="checkbox">How did you feel?</label><br>
+            <div id="checkbox" style="margin-bottom: 10px; margin-top: 1px">
+                <span><input type="checkbox" name="number"> Funny</span><br>
+                <span><input type="checkbox" name="number"> Excited</span><br>
+                <span><input type="checkbox" name="number"> Hilarious</span><br>
+                <span><input type="checkbox" name="number"> Embarrasing</span><br><br>
+            </select>
+            <label for="experience" style="margin-bottom: 15px;">Please describe your positive experience!</label><br><br>
+            <textarea placeholder="Write down your experience!" name="experience" id="experience" style="margin-bottom: 15px; height: 10%; width: 50%"></textarea><br>
+            <button type="submit">Отправить</button><br><br>
+        </div>
+    </body>
+</html>
