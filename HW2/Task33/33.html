@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="33.css">
+</head>	
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Forms</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Prices
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">100$</a></li>
+              <li><a class="dropdown-item" href="#">200$</a></li>
+              <li><a class="dropdown-item" href="#">300$</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container py-4">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="hunter.jpg" class="rounded mx-auto d-block w-70" width="500" height="300">
+            </div>
+            <div class="carousel-item">
+                <img src="titan.jpg" class="rounded mx-auto d-block w-70" width="500" height="300">
+            </div>
+            <div class="carousel-item">
+                <img src="warlock.jpg" class="rounded mx-auto d-block w-70" width="500" height="300">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+</div>
+
+<div class="container py-3">
+    <h1 id="heading" class="text-center">Typical form</h1>
+</div>
+
+<div class='container py-3'>
+    <div class="p-5 mb-3 bg-light rounded-2 shadow">
+        <div class="col-sm-3">
+            <label  class="form-label"><b>Name</b></label>
+            <input type="text" class="form-control" name="name" placeholder="Enter your name" required="">
+        </div>
+
+        <div class="col-sm-3">
+            <div class="my-4">
+            <label class="form-label"><b>Email</b></label>
+            <input type="text" class="form-control" name="email" placeholder="Enter your email" required="">
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+            <div class="my-4">
+            <label class="form-label"><b>On a scale of 1-10, how good was it?</b></label>
+            <input type="text" class="form-control" name="count" placeholder="Your number" required="">
+            </div>
+        </div>
+        
+        <div class="col-md-5">
+            <label class="form-label"><b>How it happened?</b></label>
+            <div class="col-md-5">
+            <select class="form-select" name="user_profile" required="">
+                <option value="">Spontaniously</option>
+                <option>Specially</option>
+                <option>Just luck</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <span class="text-start text"><b>At what time of a day it happened?</b></span>
+            <div class="form-check">
+                <input id="morning" name="time" type="radio" class="form-check-input" checked="" required="">
+                <label class="form-check-label" for="morning">Morning</label>
+            </div>
+            <div class="form-check">
+                <input id="day" name="time" type="radio" class="form-check-input" required="">
+                <label class="form-check-label" for="day">Day</label>
+            </div>
+            <div class="form-check">
+                <input id="evening" name="time" type="radio" class="form-check-input" required="">
+                <label class="form-check-label" for="evening">Evening</label>
+            </div>
+            <div class="form-check">
+                <input id="night" name="time" type="radio" class="form-check-input" required="">
+                <label class="form-check-label" for="night">Night</label>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <label class="form-label text"><b>How did you feel?</b></label>
+            <div class="form-check">
+                <input name="feeling" type="checkbox" class="form-check-input" id="sunny">
+                <label class="form-check-label" for="funny">Funny</label>
+            </div>
+            <div class="form-check">
+                <input name="feeling" type="checkbox" class="form-check-input" id="cloudy">
+                <label class="form-check-label" for="excited">Excited</label>
+            </div>
+            <div class="form-check">
+                <input name="feeling" type="checkbox" class="form-check-input" id="snow">
+                <label class="form-check-label" for="hilarious">Hilarious</label>
+            </div>
+            <div class="form-check">
+                <input name="feeling" type="checkbox" class="form-check-input" id="rain">
+                <label class="form-check-label" for="embarrasing">Embarrasing</label>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <label class="text"><b>Please describe your positive experience!</b></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write down your experience!" rows="4"></textarea>
+        </div>
+
+        <div class="my-4">
+        <button type="button" class="btn btn-success">Send</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
