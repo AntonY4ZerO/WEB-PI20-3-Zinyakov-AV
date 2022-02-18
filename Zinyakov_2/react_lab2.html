@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>lab2</title>
+    </head>
+    <body style="background-color: gainsboro;">
+        <div id="root"> </div>
+
+
+        <div id="pic1"> </div>
+        <img src="ffxiv1.png" style="width: 400px; height: 250px;">
+        <br> &nbsp;  
+        <div class="like_button_container" data-commentid="1"></div> 
+        <div id="pic2"> </div>
+        <img src="ffxiv2.png" style="width: 400px; height: 250px;"> 
+        <br> &nbsp; 
+        <div class="like_button_container" data-commentid="2"></div>
+        <div id="pic3"> </div>
+        <img src="ffxiv3.png" style="width: 400px; height: 250px;"> 
+        <br> &nbsp; 
+        <div class="like_button_container" data-commentid="3"></div>
+        <br> &nbsp; 
+        
+        <div id="fin"> </div>
+        <div id="chbx1"> </div>
+        <div id="chbx2"> </div>
+        <div id="chbx3"> </div>
+
+        <div id="list_label"> </div>
+        <div id="list"> </div>
+          
+        <script type="text/babel">
+            ReactDOM.render(
+            <div><h1>Average FFXIV react enjoyer!</h1></div>,
+            document.getElementById("root")
+            );
+
+            ReactDOM.render(
+            <div><h3>Pyros ride</h3></div>,
+            document.getElementById("pic1")
+            );
+
+            ReactDOM.render(
+            <div><h3>Eureka procrastination</h3></div>,
+            document.getElementById("pic2")
+            );
+
+            ReactDOM.render(
+            <div><h3>Triad player</h3></div>,
+            document.getElementById("pic3")
+            ); 
+
+            ReactDOM.render(
+            <div><h2>What picture do you like more?</h2></div>,
+            document.getElementById("fin")
+            );
+            
+            ReactDOM.render(
+            <div><input type="checkbox" id="ph1" name="ph1"></input>
+            <label for="ph1">Pyros ride</label></div>,
+            document.getElementById("chbx1")
+            );
+
+            ReactDOM.render(
+            <div><input type="checkbox" id="ph2" name="ph2"checked></input>
+            <label for="ph2">Eureka procrastination</label></div>,
+            document.getElementById("chbx2")
+            );
+
+            ReactDOM.render(
+            <div><input type="checkbox" id="ph3" name="ph3"></input>
+            <label for="ph3">Triad player</label></div>,
+            document.getElementById("chbx3")
+            );
+
+            ReactDOM.render(
+            <div><h3>Omega tiers</h3></div>,
+            document.getElementById("list_label")
+            );
+
+            ReactDOM.render(
+            <div><ul>
+                <li>Delta</li>
+                <li>Sigma</li>
+                <li>Alpha</li>
+            </ul></div>,
+            document.getElementById("list")
+            );
+        </script>
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+        <script src="scripts/like_button.js"></script>
+    </body>
+</html>
