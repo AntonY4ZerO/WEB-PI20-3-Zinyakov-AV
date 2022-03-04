@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Калькулятор</title>
+  </head>
+  <body style="background-color: gainsboro;">
+    <div id="input1"> </div>
+    <div id="input2"> </div>
+    <div id="plus" onclick="plus()"> </div>
+    <div id="minus" onclick="minus()"> </div>
+    <div id="mult" onclick="mult()"> </div>
+    <div id="div" onclick="div()"> </div>
+    <div id="clear" onclick="cl()"> </div>
+    <div id="res"> </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    ReactDOM.render(
+        <input id='num1'/>,
+        document.getElementById("input1")
+    )
+    ReactDOM.render(
+        <input id='num2'/>,
+        document.getElementById("input2")
+    )
+
+    function plus() {
+    var result;
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    result = num1 + num2;
+    document.getElementById("res").innerHTML = result;
+    }
+    function minus() {
+    var result;
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    result = num1 - num2;
+    document.getElementById("res").innerHTML = result;
+    }
+    function mult() {
+    var result;
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    result = num1 * num2;
+    document.getElementById("res").innerHTML = result;
+    }
+    function div() {
+    var result;
+    var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+    result = num1 / num2;
+    document.getElementById("res").innerHTML = result;
+    }
+
+    function cl() {
+
+    document.getElementById("res").innerHTML = "Result";
+    }
+
+    ReactDOM.render(
+	  <button>+</button>,
+    document.getElementById("plus")
+    )
+
+    ReactDOM.render(
+	  <button>-</button>,
+    document.getElementById("minus")
+    )
+
+    ReactDOM.render(
+	  <button>*</button>,
+    document.getElementById("mult")
+    )
+
+    ReactDOM.render(
+	  <button>:</button>,
+    document.getElementById("div")
+    )
+
+    ReactDOM.render(
+	  <button>Clear</button>,
+    document.getElementById("clear")
+    )
+
+    const userClassName = "user-info"; 
+    const styleObj = { 
+        color:'Red',  
+        fontFamily:'Times New Roman' 
+    }; 
+
+    ReactDOM.render( 
+        <div className={userClassName}  style={styleObj}> 
+                <p>Result</p> 
+        </div>, 
+        document.getElementById("res") 
+    ) 
+    </script>
+  </body>
+</html>
