@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Zinyakov_10</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app"></div>
+         
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      
+    function UserData() {
+      const [user, setUser] = React.useState({name:"Антон"});
+      const [age, setAge] = React.useState({age:19});
+      const [fruit, setFruit] = React.useState({fruit:'банан'});
+      const [todos1, setTodos1] = React.useState({text: 'Изучить хуки'});
+      const [todos2, setTodos2] = React.useState({text: 'Сдать работу'});
+      const [todos3, setTodos3] = React.useState({text: 'Получить плюсик'});
+      const [count, setCount] = React.useState(0);
+       
+      function handleNameChange(event) { 
+        setUser({name: event.target.value});   
+     }
+      function handleAgeChange(event) {   
+        setAge({age: event.target.value});   
+     }
+      function handleFruitChange(event) {   
+        setFruit({fruit: event.target.value});   
+     }
+      function handleTodos1Change(event) {   
+        setTodos1({text: event.target.value});   
+     }
+     function handleTodos2Change(event) {   
+        setTodos2({text: event.target.value});   
+     }
+     function handleTodos3Change(event) {   
+        setTodos3({text: event.target.value});   
+     }
+      return (
+        <div>
+          <section>
+          <h2 class='header'> Данные обо мне! </h2>
+          <p class='info'>Имя: {user.name}</p>
+          <p class='info'>Возраст: {age.age}</p>
+          <p class='info'>Моя любимая цифра: {count}</p>
+          <p class='info'>Мой ненавистный фрукт: {fruit.fruit}</p>
+          <h3 class='header-s'>Список дел</h3>
+          <ol>
+            <li class='info'>{todos1.text}</li>
+            <li class='info'>{todos2.text}</li>
+            <li class='info'>{todos3.text}</li>
+          </ol>
+          <div>
+            <button onClick={() => setCount(count + 1)}>
+                Увеличь мою цифру
+            </button>
+        </div>
+        </section>
+        <p></p>
+        <p></p>
+        <section>
+          <div>
+            <p class='input-info'>Имя: <input type="text" value={user.name} onChange={handleNameChange} /></p>
+            <p class='input-info'>Возраст: <input type="number" min="0" max="110" value={age.age} onChange={handleAgeChange} /></p>
+            <p class='input-info'>Фрукт: <input type="text" value={fruit.fruit} onChange={handleFruitChange} /></p>
+            <p class='input-info'>Первое дело: <input type="text" value={todos1.text} onChange={handleTodos1Change} /></p>
+            <p class='input-info'>Второе дело: <input type="text" value={todos2.text} onChange={handleTodos2Change} /></p>
+            <p class='input-info'>Третье дело: <input type="text" value={todos3.text} onChange={handleTodos3Change} /></p>
+          </div>
+          
+        </section>
+        </div>
+        
+      );
+    }
+            
+    ReactDOM.createRoot(
+        document.getElementById("app")
+    )
+    .render(
+        <UserData />
+    )
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-color: lightgrey;
+}
+
+.header {
+    font-size: 30px;
+}
+
+.header-s {
+    font-size: 25px;
+}
+
+.info {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.input-info {
+    font-size: 20px;
+    font-style: normal;
+    position: relative;
+    bottom: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
